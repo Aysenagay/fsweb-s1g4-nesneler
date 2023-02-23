@@ -125,7 +125,8 @@ function AnahtardanDegerlendirmeAl(degerlendirmelerDizisi,diziElemaniArrayIndex)
 	const musteriIsmi = degerlendirmelerDizisi[diziElemaniArrayIndex].isim;
 	const musteriPuani = degerlendirmelerDizisi[diziElemaniArrayIndex].puan;
 	const musteriGeriBildirimi = degerlendirmelerDizisi[diziElemaniArrayIndex].geribildirim;
-	return musteriIsmi + 'isimli kişi' + musteriPuani + 'puan verdi şunları yazdı:' + musteriGeriBildirimi;
+
+	return musteriIsmi + " isimli kişi " + musteriPuani + " puan verdi ve şunları yazdı: " + musteriGeriBildirimi;
 	
 }
 
