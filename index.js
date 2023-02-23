@@ -75,7 +75,7 @@ const degerlendirmeler = [
 	Yukarıdaki degerlendirmeler dizisini(array) kullanarak:
 	1. Sadece Ahmet'in geribildirimini konsolda görüntüleyin - fonksiyona gerek yok
 */
-
+console.log(degerlendirmeler[degerlendirmeler.findIndex(x => x.isim === "Ahmet")]);
 
 
 /*  Görev 4 (ototest yok):  
@@ -84,7 +84,8 @@ const degerlendirmeler = [
 	2. degerlendirmeler dizisini konsolda görüntüleyerek çalışmanızı kontrol edin
 */
 
-
+degerlendirmeler[degerlendirmeler.findIndex(x => x.isim === "Reyna")].geribildirim = "bu mekan bir harika dostum, yine de garsonun gülümsememesinden puan kırdım";
+console.log(degerlendirmeler)
 
 /*  Görev 5: 
 	isim, puan, geribildirim'i içeren bir değerlendirme nesnesi oluşturup, yeni değerlendirmeyi mevcut dizinin(array) sonuna ekleyip sonuç dizisini döndüren bir fonksiyon tanımlayın. 
@@ -98,9 +99,13 @@ const degerlendirmeler = [
 */
 
 
-function DegerledirmeEkle(/*Kodlar buraya */){
-	/*Kodlar buraya */
-	
+function DegerledirmeEkle(degerlendirmelerDizisi,musteriIsmi,musteriPuani,musteriGeriBildirimi){
+degerlendirmelerDizisi.push({
+	isim:musteriIsmi,
+	puan:musteriPuani,
+	geribildirim:musteriGeriBildirimi
+})
+	return degerlendirmelerDizisi;
 }
 
 
@@ -116,9 +121,12 @@ function DegerledirmeEkle(/*Kodlar buraya */){
 */
 
 
-function AnahtardanDegerlendirmeAl(/*Kodlar buraya*/) {
-	/*Kodlar buraya*/
-
+function AnahtardanDegerlendirmeAl(degerlendirmelerDizisi,diziElemaniArrayIndex) {
+	const musteriIsmi = degerlendirmelerDizisi[diziElemaniArrayIndex].isim;
+	const musteriPuani = degerlendirmelerDizisi[diziElemaniArrayIndex].puan;
+	const musteriGeriBildirimi = degerlendirmelerDizisi[diziElemaniArrayIndex].geribildirim;
+	return musteriIsmi + 'isimli kişi' + musteriPuani + 'puan verdi şunları yazdı:' + musteriGeriBildirimi;
+	
 }
 
 
@@ -136,8 +144,12 @@ function AnahtardanDegerlendirmeAl(/*Kodlar buraya*/) {
 */
 
 
-function SonDegerlendirmeyiAl(/*Kodlar buraya*/) {
-	/*Kodlar buraya*/
+function SonDegerlendirmeyiAl(degerlendirmelerDizisi) {
+	const sonMusteriIsmi = degerlendirmelerDizisi[degerlendirmelerDizisi.length - 1].isim;
+	const sonMusteriPuani = degerlendirmelerDizisi[degerlendirmelerDizisi.length - 1].puan;
+	const sonMusteriGeriBildirimi = degerlendirmelerDizisi[degerlendirmelerDizisi.length - 1].geribildirim;
+
+	return sonMusteriIsmi + " isimli kişi " + sonMusteriPuani + " puan verdi ve şunları yazdı: " + sonMusteriGeriBildirimi;
 } 
 
 
