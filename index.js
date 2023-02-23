@@ -30,7 +30,7 @@ function MenuElemaniOlustur(isim,fiyat,kategori){
 	
 	Örnek: MenuElemaniOlustur("Karışık Pizza",5,"Pizzalar") şunu döndürür: {isim:"Karışık Pizza",fiyat:5,kategori:"Pizzalar"}
 */
-
+console.log(MenuElemaniOlustur("Karışık Pizza",5,"Pizzalar"))
 
 
 /* Görev 2: 
@@ -50,6 +50,10 @@ const burger = {
 	isim: "Burger", 
 	fiyat: 18, 
 	kategori: "Öğle Yemeği", 
+	indirim: function(indirimUygulanacakMüsteriTipi){
+		return (indirimUygulanacakMüsteriTipi=='öğretmen')||
+		(indirimUygulanacakMüsteriTipi==='öğrenci')? this.fiyat*0.75 : this.fiyat*0.9;
+	}
 
 }
 
